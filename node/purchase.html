@@ -12,11 +12,11 @@
 			  if('{{this}}' == 'Mass') {
 			  	$(".planetText").text("This planet has a mass of {{../mass}}");
 			  } else if ('{{this}}' == 'Temperature') {
-			  	$(".planetText").text("The parent star has a temperature of {{../temp}}");
+			  	$(".planetText").text("This planet has a temperature of {{../temp}}");
 			  }else if ('{{this}}' == 'Orbital-Period') {
-			  	$(".planetText").text("A year on this planet is {{../orbital_period}} earth days");
+			  	$(".planetText").text("A year on this planet is {{../orbital_period}} earth years");
 			  }else if ('{{this}}' == 'Distance-From-Earth') {
-			  	$(".planetText").text("This planet is {{../dist_from_earth}} parsecs from Earth");
+			  	$(".planetText").text("This planet is {{../dist_from_earth}} light-years from Earth");
 			  }else if ('{{this}}' == 'Radius') {
 			  	$(".planetText").text("This planet has a radius of {{../radius}}");
 			  }else if ('{{this}}' == 'Year-Discovered') {
@@ -42,26 +42,11 @@
 	<h1 class="planetText"></h1>
 </div>
 <div class='buttons'>
-    <div class='adopt'>
-    	<h1>Adopt It</h1>
-    	<div class="icon"></div>
-    </div>
-    <div class="divider"></div>
-    <div class='filter'>
-    	<h1>See a planet</h1>
-    	<div class="lesser icon"></div>
-    	<div class="item icon"></div>
-    	<div class="greater icon"></div>
-    </div>
+    <input class='namePlanet' type='text' value='NAME YOUR PLANET' />
+    <input class='purchase' type='submit' value='PURCHASE' />
     <script>
-       $('.lesser').click(function (event){
-       	window.location = window.location + '?max=orbital_period:{{orbital_period}}'
-       });
-       $('.greater').click(function (event){
-       	window.location = window.location + '&min=radius:{{radius}}';
-       });
-       $('.adopt').click(function (event){
-       	window.location = window.location + 'purchase';
-       });
+      $(".purchase").click(function (event){
+        window.location = 'https://stripe.com/';
+      });
     </script>
 </div>

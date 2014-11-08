@@ -7,8 +7,8 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  font-family: gotham, helvetica;
-  font-style: bold;
+  font-family: futura;
+  font-weight: 100;
   text-transform: uppercase;
 }
 
@@ -59,8 +59,9 @@ body {
   text-align: center;
   padding-top: 50px;
   font-size: 20px;
-  width:175px;
+  width:160px;
   margin: auto;
+  vertical-align: middle;
 }
 
 .options .Alien-Life {
@@ -188,3 +189,23 @@ body {
   background-size: 60px 60px;
 }
 
+.buttons .namePlanet{
+  width:200px;
+  height:30px;
+  background-color: transparent;
+  margin:none;
+  border: 0px solid;
+  color:white;
+  font-size: 16px;
+  opacity: .7;
+  border-bottom: 2px solid white;
+}
+
+.buttons .purchase {
+  width:100px;
+  height:30px;
+  background-color: white;
+  border:none;
+  opacity: .7;
+  font-size: 16px;
+}

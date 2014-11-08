@@ -91,10 +91,24 @@ function upload(params, response) {
   response.end();
 }
 
+function purchase(params, response) {
+  var source = fs.readFileSync('purchase.html', 'utf8');
+  var template = Handlebars.compile(source);
+  MongoClient.getInitial(function(record) {
+      record['options'] = ["Alien-Life", "Mass", "Temperature", "Orbital-Period", "Distance-From-Earth", "Radius", "Year-Discovered", "Neighbors"];
+      var result = template(record);
+
+      response.writeHead(200, {"Content-Type": "text/html"});
+      response.write(result);
+      response.end();
+    })
+}
+
 exports.start = start;
 exports.upload = upload;
 exports.pageScript = pageScript;
 exports.css = css;
 exports.getPlanet = getPlanet;
+exports.purchase = purchase;
 
 

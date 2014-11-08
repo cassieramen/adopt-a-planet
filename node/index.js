@@ -9,5 +9,6 @@ handle["/upload"] = requestHandlers.upload;
 handle["/script.js"] = requestHandlers.pageScript;
 handle["/css/style.css"] = requestHandlers.css;
 handle["/getPlanet"] = requestHandlers.getPlanet;
+handle["/purchase"] = requestHandlers.purchase;
 
 server.start(router.route, handle);
