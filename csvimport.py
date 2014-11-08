@@ -16,11 +16,28 @@ def getCurrentData():
 			if(len(columns) == 0):
 				columns = columns + dataRow
 			else:
-				planet = {}
-				for i in range (0, len(columns)):
-					planet[columns[i]] = dataRow[i]
-				#print planet
+				planet = {
+					"mass" : toFloat(dataRow[columns.index('pl_masse')]),
+					"orbital_period": toFloat(dataRow[columns.index('pl_orbper')]),
+					"radius": toFloat(dataRow[columns.index('pl_rade')]),
+					"year_discovered": toInt(dataRow[columns.index('pl_disc')]),
+					"dist_from_earth": toFloat(dataRow[columns.index('st_dist')]),
+					"temp": toFloat(dataRow[columns.index('st_teff')]),
+					"name": dataRow[columns.index('pl_name')],
+					"neighbors": toInt(dataRow[columns.index('pl_pnum')])
+				}
 				collection.insert(planet)
 
+def toFloat(s):
+    try:
+        return float(s)
+    except ValueError:
+        return None
+
+def toInt(s):
+    try:
+        return int(s)
+    except ValueError:
+        return None
 
 getCurrentData()
