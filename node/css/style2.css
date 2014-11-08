@@ -1,0 +1,279 @@
+html { 
+  padding:0;
+  margin:0;
+  background: url(../images/bg.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  z-index: -2;
+}
+
+body { 
+  padding:0;
+  margin:0;
+}
+
+.bg-shade{
+  position:fixed;
+  padding:0;
+  margin:0;
+  top:0;
+  bottom: 0;
+  background-color: black;
+  opacity: .7;
+  min-height: 100%;
+  min-width: 100%;
+  z-index: -1;
+
+}
+
+h2{
+  color:white;
+  text-align: center;
+  margin-top: 100px;
+    font-family: helvetica;
+font-style: bold;
+color: white;
+font-size: 24px;
+text-transform: uppercase;
+}
+
+.middle{
+  width:250px;
+  margin: 0px auto;
+}
+.planet{
+  display: inline;
+  position: fixed;
+  margin: 60px auto;
+  width: 200px;
+  right:0;
+  left:0;
+  height:200px;
+  background-color: white;
+  background: url(../images/icon.png);
+  background-size: 200px 200px;
+}
+
+.name{
+  display: inline;
+  position: fixed;
+  margin: 0px auto;
+  width: 200px;
+  right:0;
+  left:0;
+  text-align: center;
+  font-family: helvetica;
+font-style: bold;
+color: white;
+font-size: 12px;
+text-transform: uppercase;
+}
+
+.left {
+display: inline;
+float:left;
+width:230px;
+/*background:#9c9;*/
+}
+.right{
+display: inline;
+float:right;
+width:230px;
+/*background:#c9c;*/
+}
+
+.center{
+  width:550px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.icon{
+  cursor: pointer;
+  z-index: 10;
+  width:60px;
+  height:60px;
+  background-color: white;
+  opacity: .5;
+  -webkit-transition: .5s; /* For Safari 3.1 to 6.0 */
+  transition: .5s;
+}
+
+.one{
+  margin-left: 135px;
+  margin-bottom: -15px;
+  background: url(../images/Alien.png);
+  background-size: 60px 60px;
+}
+.two{
+  margin-left: 85px;
+  margin-top:10px;
+  background: url(../images/Neighbors.png);
+  background-size: 60px 60px;
+}
+.three{
+  margin-left: 55px;
+  background: url(../images/Weight.png);
+  background-size: 60px 60px;
+  margin-top:10px;
+}
+.four{
+  margin-left: 85px;
+  margin-top:10px;
+  background: url(../images/Time.png);
+  background-size: 60px 60px;
+}
+
+.five{
+  margin-left: 25px;
+  background: url(../images/Commute.png);
+  background-size: 60px 60px;
+}
+.six{
+  margin-left: 75px;
+  background: url(../images/Orbit.png);
+  background-size: 60px 60px;
+}
+.seven{
+  margin-left:100px;
+  background: url(../images/Tempature.png);
+  background-size: 60px 60px;
+  margin-top:10px;
+}
+.eight{
+  margin-left: 75px;
+  background: url(../images/Date.png);
+  background-size: 60px 60px;
+  margin-top:10px;
+  filter: hue-rotate(120deg);
+}
+
+.hide{
+  display: none;
+}
+
+.titleleft{
+font-family: helvetica;
+font-style: bold;
+text-transform: uppercase;
+text-align: right;
+margin-left: -100px;
+padding-right: 70px;
+padding-top: 20px;
+color: white;
+font-size: 12px;
+}
+.titleright{
+font-family: helvetica;
+font-style: bold;
+text-transform: uppercase;
+text-align: left;
+margin-right: -100px;
+padding-left: 70px;
+padding-top: 20px;
+color: white;
+font-size: 12px;
+}
+
+.adopt{
+font-family: helvetica;
+font-style: bold;
+text-transform: uppercase;
+text-align: left;
+color: white;
+font-size: 12px;
+margin-bottom: -12px;
+}
+
+.bar{
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+.buttons{
+  margin: 0 auto;
+  position: 0px;
+  width:300px;
+}
+.divider{
+  display: inline-block;
+  margin: 0 10px;
+  height: 80px;
+  border-left: 2px solid white;
+}
+.claim{
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 5px;
+  width: 50px;
+  height:50px;
+  background-color: white;
+  background: url(../images/Flag.png);
+  background-size: 50px 50px;
+}
+
+.Orbit{
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 5px;
+  width: 50px;
+  height:50px;
+  background-color: white;
+  background: url(../images/Orbit.png);
+  background-size: 50px 50px;
+}
+.Travel{
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 5px;
+  width: 50px;
+  height:50px;
+  background-color: white;
+  background: url(../images/Commute.png);
+  background-size: 50px 50px;
+}
+.Alien{
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 5px;
+  width: 50px;
+  height:50px;
+  background-color: white;
+  background: url(../images/Alien.png);
+  background-size: 50px 50px;
+}
+.Tempeture{
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 5px;
+  width: 50px;
+  height:50px;
+  background-color: white;
+  background: url(../images/Tempature.png);
+  background-size: 50px 50px;
+}
+.Neighbors{
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 5px;
+  width: 50px;
+  height:50px;
+  background-color: white;
+  background: url(../images/Neighbors.png);
+  background-size: 50px 50px;
+}
+.Discovered{
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 5px;
+  width: 50px;
+  height:50px;
+  background-color: white;
+  background: url(../images/Date.png);
+  background-size: 50px 50px;
+}
+.icon:hover{
+  opacity:1;
+}
