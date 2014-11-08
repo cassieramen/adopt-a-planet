@@ -9,13 +9,13 @@ function start(params, response) {
   var source = fs.readFileSync('index.html', 'utf8');
   var template = Handlebars.compile(source);
 
-  MongoClient.getInitial(function(record){
+  MongoClient.getInitial(function(record) {
     var result = template(record);
 
     response.writeHead(200, {"Content-Type": "text/html"});
     response.write(result);
     response.end();
-  }
+  })
 
 }
 
