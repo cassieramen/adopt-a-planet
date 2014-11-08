@@ -57,7 +57,7 @@ MongoClient.prototype.filterWithQuery = function (query, callback) {
   if(query.max) {
     var maximums = query.max.split(',');
     for (var j in maximums) {
-      var elements = maximums[i].split(':');
+      var elements = maximums[j].split(':');
       //we want to have a comparison to previous planet
       var comparison = {};
       comparison[elements[0]] = { $lt : parseFloat(elements[1])};
