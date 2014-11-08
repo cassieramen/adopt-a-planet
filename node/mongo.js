@@ -24,8 +24,8 @@ MongoClient.prototype.filterWithRange= function (min, max, field, callback) {
     var query = {};
     query[field] = {$lt : max, $gt : min}
     
-    collection.find(query).toArray(function(err, records) {
-        callback(records);
+    collection.find(query).limit(1).toArray(function(err, records) {
+        callback(records[0]);
         db.close();
     });
 
