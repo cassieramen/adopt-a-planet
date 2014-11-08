@@ -10,19 +10,19 @@
     		  $(".planet").css("background-color", "white");
     		  $(".planet").css("opacity", .5);
 			  if('{{this}}' == 'Mass') {
-			  	$(".planetText").text("This planet has a mass of {{../mass}}");
+			  	$(".planetText").text("This planet is {{../mass}}X more massive than Earth");
 			  } else if ('{{this}}' == 'Temperature') {
-			  	$(".planetText").text("The parent star has a temperature of {{../temp}}");
+			  	$(".planetText").text("The parent star has a temperature of {{../temp}}K");
 			  }else if ('{{this}}' == 'Orbital-Period') {
 			  	$(".planetText").text("A year on this planet is {{../orbital_period}} earth days");
 			  }else if ('{{this}}' == 'Distance-From-Earth') {
 			  	$(".planetText").text("This planet is {{../dist_from_earth}} parsecs from Earth");
 			  }else if ('{{this}}' == 'Radius') {
-			  	$(".planetText").text("This planet has a radius of {{../radius}}");
+			  	$(".planetText").text("This planet is {{../radius}}X the size of earth");
 			  }else if ('{{this}}' == 'Year-Discovered') {
 			  	$(".planetText").text("This planet was discovered in {{../year-discovered}}");
 			  }else if ('{{this}}' == 'Neighbors') {
-			  	$(".planetText").text("This planet has a {{../neighbors}} neighbors");
+			  	$(".planetText").text("This planet has {{../neighbors}} neighbor(s)");
 			  }else if ('{{this}}' == 'Alien-Life') {
 			  	$(".planetText").text("This planet is not habitable");
 			  }
