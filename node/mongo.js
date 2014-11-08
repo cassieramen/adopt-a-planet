@@ -41,17 +41,35 @@ MongoClient.prototype.filterWithQuery = function (query, callback) {
     var minimums = query.min.split(',');
     for (var i in minimums) {
       var elements = minimums[i].split(':');
-      parsedQuery[elements[0]] = { $gt : parseFloat(elements[1]) };
+      //we want to have a comparison to previous planet
+      var comparison = {};
+      comparison[elements[0]] = { $gt : parseFloat(elements[1])};
+      //a lot of planets are missing fields so let's also include ones without 
+      var exists = {};
+      exists[elements[0]] = { $exists : false};
+      //and now we can make it an or query
+      parsedQuery['$or'] = [ comparison, exists ] ;
     }
 
     var maximums = query.max.split(',');
     for (var j in maximums) {
-      var elements = maximums[j].split(':');
-      parsedQuery[elements[0]] = { $lt : parseFloat(elements[1]) };
+            //we want to have a comparison to previous planet
+      var comparison = {};
+      comparison[elements[0]] = { $lt : parseFloat(elements[1])};
+      //a lot of planets are missing fields so let's also include ones without 
+      var exists = {};
+      exists[elements[0]] = { $exists : false};
+      //and now we can make it an or query
+      parsedQuery['$or'] = [ comparison, exists ];
     }
     
+    console.log(parsedQuery);
     collection.find(parsedQuery).limit(1).toArray(function(err, records) {
-        callback(records[0]);
+        if(records) {
+          callback(records[0]);
+        } else {
+          callback(null);
+        }
         db.close();
     });
 
