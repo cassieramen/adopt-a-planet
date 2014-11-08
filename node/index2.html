@@ -1,10 +1,53 @@
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
 <link rel="stylesheet" href="css/style.css">
 <div class="options">
   {{#each options}}
     <div class="icon {{this}}">
     	<span class="data">{{this}}</span>
+    	<script>
+    		function showMessage(event) {
+    		  $(".planet").css("background-color", "white");
+			  if('{{this}}' == 'Mass') {
+			  	$(".planetText").text("This planet has a mass of {{../mass}}");
+			  } else if ('{{this}}' == 'Temperature') {
+			  	$(".planetText").text("This planet has a temperature of {{../temp}}");
+			  }else if ('{{this}}' == 'Orbital-Period') {
+			  	$(".planetText").text("A year on this planet is {{../orbital_period}} days");
+			  }else if ('{{this}}' == 'Distance-From-Earth') {
+			  	$(".planetText").text("This planet is {{../dist_from_earth}} light-years from Earth");
+			  }else if ('{{this}}' == 'Radius') {
+			  	$(".planetText").text("This planet has a radius of {{../radius}}");
+			  }else if ('{{this}}' == 'Year-Discovered') {
+			  	$(".planetText").text("This planet was discovered in {{../year-discovered}}");
+			  }else if ('{{this}}' == 'Neighbors') {
+			  	$(".planetText").text("This planet has a {{../neighbors}} neighbors");
+			  }else if ('{{this}}' == 'Alien-Life') {
+			  	$(".planetText").text("This planet is not habitable");
+			  }
+    		}
+
+			$( ".{{this}}" ).click(showMessage);
+			$( ".{{this}}" ).hover(showMessage, function (event) {
+				$(".planet").css("background-color", "");
+				$(".planetText").text("");
+			});
+		</script>
     </div>
   {{/each}}
 </div>
 <div class="planet">
+	<h1 class="planetText"></h1>
+</div>
+<div class='buttons'>
+    <div class='adopt'>
+    	<h1>Adopt It</h1>
+    	<div class="icon"></div>
+    </div>
+    <div class="divider"></div>
+    <div class='filter'>
+    	<h1>See a planet</h1>
+    	<div class="lesser icon"></div>
+    	<div class="item icon"></div>
+    	<div class="greater icon"></div>
+    </div>
 </div>

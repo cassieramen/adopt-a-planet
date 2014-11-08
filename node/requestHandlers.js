@@ -3,6 +3,13 @@ var mongoConnector = require("./mongo")
 var MongoClient = new mongoConnector.MongoClient();
 var fs = require('fs');
 var Handlebars = require('handlebars');
+Handlebars.registerHelper('exists', function(variable, options) {
+    if (typeof variable !== 'undefined') {
+        return 1;
+    } else {
+        return 0;
+    }
+});
 
 function start(params, response) {
 
@@ -11,6 +18,7 @@ function start(params, response) {
 
   MongoClient.getInitial(function(record) {
     record['options'] = ["Alien-Life", "Mass", "Temperature", "Orbital-Period", "Distance-From-Earth", "Radius", "Year-Discovered", "Neighbors"];
+    console.log(record);
     var result = template(record);
 
     response.writeHead(200, {"Content-Type": "text/html"});

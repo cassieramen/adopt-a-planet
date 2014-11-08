@@ -1,15 +1,18 @@
 body { 
   padding:0;
-  margin:0;
+  margin:auto;
+  width: 500px;
   background: url(../images/bg.png) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  font-family: helvetica;
+  font-style: bold;
+  text-transform: uppercase;
 }
 
 .options {
-  width: 500px;
   margin:auto;
   color:white;
 }
@@ -18,10 +21,17 @@ body {
   display: inline-block;
   width:60px;
   height:60px;
-  opacity: .5;
+  background-color: white;
+}
+
+.icon {
+ opacity: .5;
   -webkit-transition: .5s; /* For Safari 3.1 to 6.0 */
   transition: .5s;
-  background-color: white;
+}
+
+.icon:hover {
+  opacity: 1;
 }
 
 .options .data {
@@ -35,6 +45,12 @@ body {
   background-color: white;
   background: url(../images/icon.png);
   background-size: 200px 200px;
+  border-radius: 100px;
+}
+
+.planetText {
+  text-align: center;
+  padding-top: 50px;
 }
 
 .options .Alien-Life {
@@ -83,4 +99,47 @@ body {
   background-size: 60px 60px;
   margin-top:10px;
  filter: hue-rotate(120deg);
+}
+
+.buttons {
+  color: white;
+  font-size: 12px;
+  display: inline-block;
+  margin: auto;
+}
+
+.buttons .icon {
+  width:50px;
+  height:50px;
+  background-color: white; c
+
+}
+
+.buttons div {
+  display: inline-block;
+}
+
+.buttons .divider {
+  height: 100px;
+  border: 1px solid white;
+  margin: 0 20px;
+}
+
+.buttons .adopt .icon {
+  background: url(../images/Flag.png);
+  background-size: 50px 50px;
+}
+
+.buttons .filter div {
+  display: inline-block;
+}
+
+.buttons .filter .lesser {
+  background: url(../images/Minus.png);
+  background-size: 50px 50px;
+}
+
+.buttons .filter .greater {
+  background: url(../images/Plus.png);
+  background-size: 50px 50px;
 }
