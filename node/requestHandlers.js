@@ -6,10 +6,11 @@ var Handlebars = require('handlebars');
 
 function start(params, response) {
 
-  var source = fs.readFileSync('index.html', 'utf8');
+  var source = fs.readFileSync('index2.html', 'utf8');
   var template = Handlebars.compile(source);
 
   MongoClient.getInitial(function(record) {
+    record['options'] = ["Alien-Life", "Mass", "Temperature", "Orbital-Period", "Distance-From-Earth", "Radius", "Year-Discovered", "Neighbors"];
     var result = template(record);
 
     response.writeHead(200, {"Content-Type": "text/html"});
