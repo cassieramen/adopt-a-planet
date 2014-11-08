@@ -1,6 +1,6 @@
 require 'csv'
 require 'mongoid'
-Mongoid.load!('mongoid.yml', :production)
+Mongoid.load!(File.join('config','mongoid.yml'), :development)
 
 class Planet
   include Mongoid::Document

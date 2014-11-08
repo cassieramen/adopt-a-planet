@@ -22,11 +22,9 @@ production:
     default:
       uri: mongodb://username:password@host1:port1,host2:port2//database'
       options:
-        consistency: :strong
         max_retries: 30
         retry_interval: 1
         timeout: 15
-        safe: true
         refresh_interval: 10
 
 
