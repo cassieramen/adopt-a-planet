@@ -4,22 +4,32 @@ var MongoClient = new mongoConnector.MongoClient();
 var fs = require('fs');
 
 function start(params, response) {
-  console.log("Handling start with params, ", params);
-  
-  if (!params) {
+  response.writeHead(200, {"Content-Type": "text/html"});
+  var index = fs.readFileSync('index.html');
+  response.write(index);
+  response.end();
+}
+
+function getPlanet(params, response) {
+  console.log(params);
+
+  var empty = true;
+  for (var key in params) {
+    if (params.hasOwnProperty(key)) { 
+      empty = false; 
+    }
+  }
+
+  if (empty) {
     MongoClient.getInitial(function(record){
-      response.writeHead(200, {"Content-Type": "text/html"});
-      console.log(record);
-      var index = fs.readFileSync('index.html');
-      response.write(index);
+      response.writeHead(200, {"Content-Type": "text/plain"});
+      response.write(format(record));
       response.end();
     })
   } else {
     MongoClient.filterWithQuery(params, function(record){
-      response.writeHead(200, {"Content-Type": "text/html"});
-      console.log(record);
-      var index = fs.readFileSync('index.html');
-      response.write(index);
+      response.writeHead(200, {"Content-Type": "text/plain"});
+      response.write(format(record));
       response.end();
     })
   }
@@ -51,5 +61,6 @@ exports.start = start;
 exports.upload = upload;
 exports.pageScript = pageScript;
 exports.css = css;
+exports.getPlanet = getPlanet;
 
 
