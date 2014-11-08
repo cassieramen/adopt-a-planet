@@ -25,6 +25,7 @@ body {
   min-height: 100%;
   min-width: 100%;
   z-index: -1;
+
 }
 
 h2{
@@ -93,12 +94,11 @@ width:230px;
 
 
 .icon{
+  cursor: pointer;
   z-index: 10;
   width:60px;
   height:60px;
   background-color: white;
-  background: url(../images/icon.png);
-  background-size: 60px 60px;
   opacity: .5;
   -webkit-transition: .5s; /* For Safari 3.1 to 6.0 */
   transition: .5s;
@@ -107,30 +107,104 @@ width:230px;
 .one{
   margin-left: 135px;
   margin-bottom: -15px;
+  background: url(../images/Alien.png);
+  background-size: 60px 60px;
 }
 .two{
   margin-left: 85px;
   margin-top:10px;
+  background: url(../images/Neighbors.png);
+  background-size: 60px 60px;
 }
 .three{
   margin-left: 55px;
+  background: url(../images/Weight.png);
+  background-size: 60px 60px;
   margin-top:10px;
 }
-
+.four{
+  margin-left: 85px;
+  margin-top:10px;
+  background: url(../images/Time.png);
+  background-size: 60px 60px;
+}
 
 .five{
   margin-left: 25px;
-  margin-bottom: -15px;
+  background: url(../images/Commute.png);
+  background-size: 60px 60px;
 }
 .six{
   margin-left: 75px;
-  margin-top:10px;
+  background: url(../images/Orbit.png);
+  background-size: 60px 60px;
 }
 .seven{
   margin-left:100px;
+  background: url(../images/Tempature.png);
+  background-size: 60px 60px;
   margin-top:10px;
 }
+.eight{
+  margin-left: 75px;
+  background: url(../images/Date.png);
+  background-size: 60px 60px;
+  margin-top:10px;
+  filter: hue-rotate(120deg);
+}
 
+.hide{
+  display: none;
+}
+
+.titleleft{
+font-family: helvetica;
+font-style: bold;
+text-transform: uppercase;
+text-align: right;
+margin-left: -100px;
+padding-right: 70px;
+padding-top: 20px;
+color: white;
+font-size: 12px;
+}
+.titleright{
+font-family: helvetica;
+font-style: bold;
+text-transform: uppercase;
+text-align: left;
+margin-right: -100px;
+padding-left: 70px;
+padding-top: 20px;
+color: white;
+font-size: 12px;
+}
+
+.bar{
+  position: fixed;
+  bottom: 100px;
+  width: 100%;
+}
+.buttons{
+  margin: 0 auto;
+  width:300px;
+}
+.divider{
+  display: inline-block;
+  margin: 0 10px;
+  height: 50px;
+  border-left: 2px solid white;
+}
+.claim{
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 5px;
+  width: 50px;
+  height:50px;
+  background-color: white;
+  background: url(../images/Flag.png);
+  background-size: 50px 50px;
+}
 .icon:hover{
   opacity:1;
 }
