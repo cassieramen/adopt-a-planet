@@ -1,4 +1,5 @@
-body { 
+
+dy { 
   padding:0;
   margin:auto;
   width: 500px;
@@ -22,12 +23,14 @@ body {
   width:60px;
   height:60px;
   background-color: white;
+  
 }
 
 .icon {
  opacity: .5;
   -webkit-transition: .5s; /* For Safari 3.1 to 6.0 */
   transition: .5s;
+  
 }
 
 .icon:hover {
@@ -55,51 +58,71 @@ body {
 
 .options .Alien-Life {
   background: url(../images/Alien.png);
-  margin-left: 135px;
-  margin-bottom: -15px;
+  margin-left:px;
+  margin-top: px;
   background-size: 60px 60px;
+  float:left ;
+  clear: ;
+  
 }
 .options .Neighbors {
-  margin-left: 85px;
-  margin-top:10px;
+  margin-left: 0px;
+  margin-top:px;
   background: url(../images/Neighbors.png);
   background-size: 60px 60px;
+  float:right ;
+  clear: ;
 }
 .options .Mass{
-  margin-left: 55px;
+  margin-left: px;
   background: url(../images/Weight.png);
   background-size: 60px 60px;
-  margin-top:10px;
+  margin-top:px;
+  float:left;
+  clear: ;
 }
 .options .Orbital-Period{
-  margin-left: 85px;
-  margin-top:10px;
+  margin-left: px;
+  margin-top:px;
   background: url(../images/Time.png);
   background-size: 60px 60px;
+  float: left;
+  clear: right;
 }
 .options .Distance-From-Earth{
-  margin-left: 25px;
+  margin-left: px;
+  margin-top: px;
   background: url(../images/Commute.png);
   background-size: 60px 60px;
+  float:right ;
+  clear:;
 }
 .options .Radius{
-  margin-left: 75px;
+  margin-left: px;
+  margin-top: px;
   background: url(../images/Orbit.png);
   background-size: 60px 60px;
+  float: left;
+  clear:right;
 }
 .options .Temperature{
-  margin-left:100px;
+  margin-left:0px;
   background: url(../images/Tempature.png);
   background-size: 60px 60px;
-  margin-top:10px;
+  margin-top:0px;
+  float: right;
+  clear: ;
 }
 .options .Year-Discovered{
-  margin-left: 75px;
+  margin-left: px;
   background: url(../images/Date.png);
   background-size: 60px 60px;
-  margin-top:10px;
+  margin-top:0px;
  filter: hue-rotate(120deg);
+ float: right;
+ clear: right;
 }
+
 
 .buttons {
   color: white;
@@ -143,3 +166,4 @@ body {
   background: url(../images/Plus.png);
   background-size: 50px 50px;
 }
+
