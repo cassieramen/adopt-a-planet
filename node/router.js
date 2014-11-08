@@ -9,6 +9,10 @@ function route(pathname, params, handler, response) {
   	var img = fs.readFileSync(pathname.slice(1));
   	response.writeHead(200, {"Content-Type": "image/png"});
     response.end(img, 'binary');
+  } else if (pathname.indexOf('jquery') > -1 ) {
+  	var jquery = fs.readFileSync(pathname.slice(1));
+  	response.writeHead(200, {"Content-Type": "text/javascript"});
+    response.end(jquery);
   } else {
     console.log("No handler found for pathname:" + pathname);
     response.writeHead(404, {"Content-Type": "text/plain"});
