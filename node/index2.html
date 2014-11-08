@@ -8,6 +8,7 @@
     	<script>
     		function showMessage(event) {
     		  $(".planet").css("background-color", "white");
+    		  $(".planet").css("opacity", .5);
 			  if('{{this}}' == 'Mass') {
 			  	$(".planetText").text("This planet has a mass of {{../mass}}");
 			  } else if ('{{this}}' == 'Temperature') {

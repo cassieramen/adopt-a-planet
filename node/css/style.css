@@ -7,7 +7,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  font-family: helvetica;
+  font-family: gotham, helvetica;
   font-style: bold;
   text-transform: uppercase;
 }
@@ -34,8 +34,7 @@ body {
 .icon {
  opacity: .5;
   -webkit-transition: .5s; /* For Safari 3.1 to 6.0 */
-  transition: .5s;
-  
+  transition: .5s; 
 }
 
 .icon:hover {
@@ -149,6 +148,11 @@ body {
 
 .buttons div {
   display: inline-block;
+  height:200px;
+}
+
+.buttons .adopt {
+  margin-top: -20px;
 }
 
 .buttons .divider {
@@ -160,7 +164,7 @@ body {
 .buttons .adopt .icon {
   background: url(../images/Flag.png);
   background-size: 50px 50px;
-  margin: auto;
+  margin-left: 30px;
 }
 
 .buttons .filter div {
