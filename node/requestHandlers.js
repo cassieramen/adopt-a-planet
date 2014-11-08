@@ -2,17 +2,24 @@ var mongoConnector = require("./mongo")
     , format = require('util').format;
 var MongoClient = new mongoConnector.MongoClient();
 var fs = require('fs');
+var Handlebars = require('handlebars');
 
 function start(params, response) {
-  response.writeHead(200, {"Content-Type": "text/html"});
-  var index = fs.readFileSync('index.html');
-  response.write(index);
-  response.end();
+
+  var source = fs.readFileSync('index.html', 'utf8');
+  var template = Handlebars.compile(source);
+
+  MongoClient.getInitial(function(record){
+    var result = template(record);
+
+    response.writeHead(200, {"Content-Type": "text/html"});
+    response.write(result);
+    response.end();
+  }
+
 }
 
 function getPlanet(params, response) {
-  console.log(params);
-
   var empty = true;
   for (var key in params) {
     if (params.hasOwnProperty(key)) { 
