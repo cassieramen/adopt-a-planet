@@ -16,8 +16,10 @@ def getCurrentData():
 			if(len(columns) == 0):
 				columns = columns + dataRow
 			else:
-				nameIndex = columns.index('NAME')
-				planet = { "name" : dataRow[nameIndex] }
+				planet = {}
+				for i in range (0, len(columns)):
+					planet[columns[i]] = dataRow[i]
+				#print planet
 				collection.insert(planet)
 
 
