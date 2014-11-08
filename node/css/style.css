@@ -200,12 +200,13 @@ margin-bottom: -12px;
 }
 
 .bar{
-  position: fixed;
-  bottom: 100px;
+  position: absolute;
+  bottom: 0px;
   width: 100%;
 }
 .buttons{
   margin: 0 auto;
+  position: 0px;
   width:300px;
 }
 .divider{
