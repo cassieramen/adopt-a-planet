@@ -32,6 +32,11 @@ h2{
   color:white;
   text-align: center;
   margin-top: 100px;
+    font-family: helvetica;
+font-style: bold;
+color: white;
+font-size: 24px;
+text-transform: uppercase;
 }
 .left{
 /*  float: left;
@@ -67,7 +72,11 @@ h2{
   right:0;
   left:0;
   text-align: center;
-  color:white;
+  font-family: helvetica;
+font-style: bold;
+color: white;
+font-size: 12px;
+text-transform: uppercase;
 }
 
 .left {
@@ -180,6 +189,16 @@ color: white;
 font-size: 12px;
 }
 
+.adopt{
+font-family: helvetica;
+font-style: bold;
+text-transform: uppercase;
+text-align: left;
+color: white;
+font-size: 12px;
+margin-bottom: -12px;
+}
+
 .bar{
   position: fixed;
   bottom: 100px;
@@ -192,7 +211,7 @@ font-size: 12px;
 .divider{
   display: inline-block;
   margin: 0 10px;
-  height: 50px;
+  height: 80px;
   border-left: 2px solid white;
 }
 .claim{
@@ -203,6 +222,67 @@ font-size: 12px;
   height:50px;
   background-color: white;
   background: url(../images/Flag.png);
+  background-size: 50px 50px;
+}
+
+.Orbit{
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 5px;
+  width: 50px;
+  height:50px;
+  background-color: white;
+  background: url(../images/Orbit.png);
+  background-size: 50px 50px;
+}
+.Travel{
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 5px;
+  width: 50px;
+  height:50px;
+  background-color: white;
+  background: url(../images/Commute.png);
+  background-size: 50px 50px;
+}
+.Alien{
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 5px;
+  width: 50px;
+  height:50px;
+  background-color: white;
+  background: url(../images/Alien.png);
+  background-size: 50px 50px;
+}
+.Tempeture{
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 5px;
+  width: 50px;
+  height:50px;
+  background-color: white;
+  background: url(../images/Tempature.png);
+  background-size: 50px 50px;
+}
+.Neighbors{
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 5px;
+  width: 50px;
+  height:50px;
+  background-color: white;
+  background: url(../images/Neighbors.png);
+  background-size: 50px 50px;
+}
+.Discovered{
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 5px;
+  width: 50px;
+  height:50px;
+  background-color: white;
+  background: url(../images/Date.png);
   background-size: 50px 50px;
 }
 .icon:hover{
