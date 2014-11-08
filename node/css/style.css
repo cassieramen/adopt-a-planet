@@ -1,5 +1,4 @@
-
-dy { 
+body { 
   padding:0;
   margin:auto;
   width: 500px;
@@ -11,6 +10,12 @@ dy {
   font-family: helvetica;
   font-style: bold;
   text-transform: uppercase;
+}
+
+.name {
+  color:white;
+  text-align: center;
+  margin-top: 100px;
 }
 
 .options {
@@ -54,6 +59,9 @@ dy {
 .planetText {
   text-align: center;
   padding-top: 50px;
+  font-size: 20px;
+  width:175px;
+  margin: auto;
 }
 
 .options .Alien-Life {
@@ -128,7 +136,8 @@ dy {
   color: white;
   font-size: 12px;
   display: inline-block;
-  margin: auto;
+  margin-left: 90px;
+  margin-top: 30px;
 }
 
 .buttons .icon {
@@ -151,6 +160,7 @@ dy {
 .buttons .adopt .icon {
   background: url(../images/Flag.png);
   background-size: 50px 50px;
+  margin: auto;
 }
 
 .buttons .filter div {
@@ -158,12 +168,19 @@ dy {
 }
 
 .buttons .filter .lesser {
-  background: url(../images/Minus.png);
+  background: url(../images/Plus.png);
   background-size: 50px 50px;
 }
 
 .buttons .filter .greater {
-  background: url(../images/Plus.png);
+  background: url(../images/Minus.png);
   background-size: 50px 50px;
+}
+
+.buttons .filter .item {
+  width:60px;
+  height:60px;
+  background: url(../images/Orbit.png);
+  background-size: 60px 60px;
 }
 

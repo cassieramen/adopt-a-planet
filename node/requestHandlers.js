@@ -12,19 +12,37 @@ Handlebars.registerHelper('exists', function(variable, options) {
 });
 
 function start(params, response) {
+  var empty = true;
+  for (var key in params) {
+    if (params.hasOwnProperty(key)) { 
+      empty = false; 
+    }
+  }
 
   var source = fs.readFileSync('index2.html', 'utf8');
   var template = Handlebars.compile(source);
 
-  MongoClient.getInitial(function(record) {
-    record['options'] = ["Alien-Life", "Mass", "Temperature", "Orbital-Period", "Distance-From-Earth", "Radius", "Year-Discovered", "Neighbors"];
-    console.log(record);
-    var result = template(record);
+  if (empty) {
+    MongoClient.getInitial(function(record) {
+      record['options'] = ["Alien-Life", "Mass", "Temperature", "Orbital-Period", "Distance-From-Earth", "Radius", "Year-Discovered", "Neighbors"];
+      console.log(record);
+      var result = template(record);
 
-    response.writeHead(200, {"Content-Type": "text/html"});
-    response.write(result);
-    response.end();
-  })
+      response.writeHead(200, {"Content-Type": "text/html"});
+      response.write(result);
+      response.end();
+    })
+  } else {
+      MongoClient.filterWithQuery(params, function(record){
+        record['options'] = ["Alien-Life", "Mass", "Temperature", "Orbital-Period", "Distance-From-Earth", "Radius", "Year-Discovered", "Neighbors"];
+        console.log(record);
+        var result = template(record);
+
+        response.writeHead(200, {"Content-Type": "text/html"});
+        response.write(result);
+        response.end();
+    })
+  }
 
 }
 

@@ -1,5 +1,6 @@
 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 <link rel="stylesheet" href="css/style.css">
+<div class="name"><h1>{{name}}</h1></div>
 <div class="options">
   {{#each options}}
     <div class="icon {{this}}">
@@ -12,7 +13,7 @@
 			  } else if ('{{this}}' == 'Temperature') {
 			  	$(".planetText").text("This planet has a temperature of {{../temp}}");
 			  }else if ('{{this}}' == 'Orbital-Period') {
-			  	$(".planetText").text("A year on this planet is {{../orbital_period}} days");
+			  	$(".planetText").text("A year on this planet is {{../orbital_period}} earth years");
 			  }else if ('{{this}}' == 'Distance-From-Earth') {
 			  	$(".planetText").text("This planet is {{../dist_from_earth}} light-years from Earth");
 			  }else if ('{{this}}' == 'Radius') {
@@ -31,6 +32,7 @@
 				$(".planet").css("background-color", "");
 				$(".planetText").text("");
 			});
+
 		</script>
     </div>
   {{/each}}
@@ -50,4 +52,12 @@
     	<div class="item icon"></div>
     	<div class="greater icon"></div>
     </div>
+    <script>
+       $('.lesser').click(function (event){
+       	window.location = window.location + '?max=orbital_period:{{orbital_period}}'
+       });
+       $('.greater').click(function (event){
+       	window.location = window.location + '&min=radius:{{radius}}';
+       });
+    </script>
 </div>
