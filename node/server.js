@@ -3,9 +3,9 @@ var url = require("url");
 
 function start(route, handler) {
   function onRequest(request,response) {
-    var pathname = url.parse(request.url).pathname;
+  	var parsedURL = url.parse(request.url, true);
     
-    route(pathname, handler, response);
+    route(parsedURL.pathname, parsedURL.query, handler, response);
   }
 
   http.createServer(onRequest).listen(8888);

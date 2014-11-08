@@ -3,18 +3,29 @@ var mongoConnector = require("./mongo")
 var MongoClient = new mongoConnector.MongoClient();
 var fs = require('fs');
 
-function start(response) {
-  console.log("Handling start");
+function start(params, response) {
+  console.log("Handling start with params, ", params);
   
-    MongoClient.filterWithRange(0, 50, 'dist_from_earth', function(records){
+  if (!params) {
+    MongoClient.getInitial(function(record){
       response.writeHead(200, {"Content-Type": "text/plain"});
+      console.log(record);
       var index = fs.readFileSync('index.html');
       response.write(index);
       response.end();
     })
+  } else {
+    MongoClient.filterWithQuery(params, function(record){
+      response.writeHead(200, {"Content-Type": "text/plain"});
+      console.log(record);
+      var index = fs.readFileSync('index.html');
+      response.write(index);
+      response.end();
+    })
+  }
 }
 
-function upload(response) {
+function upload(params, response) {
   console.log("Handling upload");
 
   response.writeHead(200, {"Content-Type": "text/plain"});
