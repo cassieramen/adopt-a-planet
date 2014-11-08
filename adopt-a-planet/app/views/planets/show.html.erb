@@ -1,7 +1,8 @@
 <h1>Congrats <%= @planet.claimed_by %>!</h1>
 <h3>Planet <%= @planet.pl_name %> is now yours! </h3>
 
+<a href="<%= @planet.pl_pelink %>">Want to see what <%= @planet.pl_name %> looks like?</a>
 
 <p> You've named it <%= @planet.claimed_name %> <p>
 
-<%= link_to "Buy another star", root_path %>
+<%= link_to "Buy another exoplanet", root_path %>
