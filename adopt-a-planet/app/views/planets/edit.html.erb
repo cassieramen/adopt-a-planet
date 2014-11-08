@@ -1,9 +1,9 @@
 <%= form_for @planet do |f| %>
-  <%= f.label :claimed_by, "Your Name" %>
+  <%= f.label :claimed_by, "Your Name:" %>
   <%= f.text_field :claimed_by %>
 
-  <%= f.label :claimed_name, "Name Your Planet" %>
+  <%= f.label :claimed_name, "Name Your Planet:" %>
   <%= f.text_field :claimed_name %>
 
-  <%= f.submit value = "donate" %>
+  <%= f.submit value = "Donate!" %>
 <% end %>
